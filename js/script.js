@@ -27,7 +27,7 @@ var sticky = {
     setTimeout(function(){ alert('Did you add, commit, and push your code from last class?'); }, 2000);
   }
   if (bodyTag.className == 'welcome-msg') {
-    setTimeout(function(){ alert("Welcome to Geekwise Academy's Websites for Beginners course. Here are some things you should know: Door code: 25829# WiFi: 'Bitwise' password: BUTTONBOX (all caps) Slack Channel: #angular2-part2"); }, 2000);
+    setTimeout(function(){ alert("Welcome to Geekwise Academy's Angular2 Part 2 course. Here are some things you should know: Door code: 25829# WiFi: 'Bitwise' password: BUTTONBOX (all caps) Slack Channel: #angular2-part2"); }, 2000);
   }
 
   var checkAuth = function() {
