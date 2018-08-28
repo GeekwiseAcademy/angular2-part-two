@@ -61,37 +61,63 @@
           </aside>
           <main class="col-sm-9">
             <ul class="points">
-              <li>Create a localStorageService</li>
-              <li>Create a sessionStorageService</li>
-              <li>Modify user service to add user to localStorage on login/register</li>
-              <li>Use a token for session storage</li>
-              <li>Logout</li>
+              <li>Local Storage Service</li>
+              <li>Session Storage Service</li>
+              <li>Managing tokens with Session Storage</li>
             </ul>
           </main>
         </div><!-- end Concepts -->
 
-        <!-- <div class="row section"> --><!-- Course Item -->
-          <!-- <aside class="col-sm-3">
-            <h2>Course Item</h2>
+        <div class="row section"><!-- Introductions -->
+          <aside class="col-sm-3">
+            <h2>Services</h2>
           </aside>
           <main class="col-sm-9">
             <ul class="points">
-              <li></li>
+              <li>What is a service and what does it do?</li>
+              <li><a href="https://angular.io/guide/architecture#services-and-dependency-injection">Angular Documentation on services</a></li>
+              <li><small><a href="https://angular.io/tutorial/toh-pt4">Tour of Heroes Service Overview</a></small></li>
             </ul>
+            <p>Great! So how do we make a service?</p>
+            <p>First, cd into the folder you want it in (services.)</p>
+            <p><a href="https://github.com/angular/angular-cli/wiki/generate-service">Creating a service with Angular CLI</a></p>
+            <pre><code>
+                $ ng g service localStorageService
+            </code></pre>
+            <small>Hint: If you want to change where the service is required, you must change that manually.</small>
+            <img src="../img/service-required.png" alt="" class="img-responsive">
           </main>
-        </div> --><!-- end Course Item -->
+        </div><!-- end Introductions -->
 
-        <!-- <div class="row section take-home"> --><!-- Take Home -->
-          <!-- <aside class="col-sm-3">
-            <h2>Take Home</h2>
+        <div class="row section"><!-- Updating the CLI -->
+          <aside class="col-sm-3">
+            <h2>Creating LocalStorageService and SessionStorageService</h2>
           </aside>
           <main class="col-sm-9">
-            <ol class="points">
-
-            </ol>
+            <ul class="points">
+              <li>Take five minutes and generate two new services in your services folder: one for Local Storage and one for Session Storage.</li>
+              <li>Now that you've got those services, let's rewrite our UserService to store our user in Local Storage when we log in.</li>
+            </ul>
+            <h3>From this...</h3>
+            <pre><code>
+                login(user: any) {
+                    return this.api.post('/userLogin', user).subscribe((res: any) => {
+                      console.log(res);
+                      this.router.navigateByUrl('/');
+                    });
+                  }
+            </code></pre>
+            <h3>To this...</h3>
+            <pre><code>
+                login(user: any) {
+                    return this.api.post('/userLogin', user).subscribe((res: any) => {
+                      this.localStorage.set('currentUser', res.user);
+                    }, err => console.log(err), () => this.router.navigateByUrl('/'));
+                  }
+            </code></pre>
+            <p>How could we handle logging our user out?</p>
           </main>
-        </div> --><!-- end Take Home -->
-
+        </div><!-- end Updating the CLI -->
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>

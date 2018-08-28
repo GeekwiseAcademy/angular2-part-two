@@ -1,100 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Angular2 Part 2</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular2 Part 2</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo"><a href="index.html"><img class="img-responsive" src="img/geekwise_owl.png" alt="geekwise owl logo"></a></div>
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav nav-pills navbar-nav pull-right">
-                <li><a href="index.html">Course Outline</a></li>
-                <li><a href="links.html">Handy Links</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lessons <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li role="presentation"><a href="one.html">Day One</a></li>
-                    <li role="presentation"><a href="two.html">Day Two</a></li>
-                    <li role="presentation"><a href="three.html">Day Three</a></li>
-                    <li role="presentation"><a href="four.html">Day Four</a></li>
-                    <li role="presentation"><a href="five.html">Day Five</a></li>
-                    <li role="presentation"><a href="six.html">Day Six</a></li>
-                    <li role="presentation"><a href="seven.html">Day Seven</a></li>
-                    <li role="presentation"><a href="eight.html">Day Eight</a></li>
-                    <li role="presentation"><a href="nine.html">Day Nine</a></li>
-                    <li role="presentation"><a href="ten.html">Day Ten</a></li>
-                    <li role="presentation"><a href="eleven.html">Day Eleven</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li role="presentation"><a href="final.html">Final Project</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h1>Day 6</h1>
-          </div>
-        </div>
-
-        <div class="row section"><!-- Concepts -->
-          <aside class="col-sm-3">
-            <h2>Concepts</h2>
-          </aside>
-          <main class="col-sm-9">
-            <ul class="points">
-              <li>Conditionals (Advanced) and form validation</li>
-              <li>Modify and show different content based on if user can be found in localStorage</li>
-              <li>Use ternary statements in ngIf and ngClass</li>
-              <li>Use functions in ngIf and ngClass</li>
-              <li>Show form validation to check and make sure correct content is show in forms</li>
+  <header>
+    <div class="logo"><a href="index.html"><img class="img-responsive" src="img/geekwise_owl.png" alt="geekwise owl logo"></a></div>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav nav-pills navbar-nav pull-right">
+          <li><a href="index.html">Course Outline</a></li>
+          <li><a href="links.html">Handy Links</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lessons
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li role="presentation"><a href="one.html">Day One</a></li>
+              <li role="presentation"><a href="two.html">Day Two</a></li>
+              <li role="presentation"><a href="three.html">Day Three</a></li>
+              <li role="presentation"><a href="four.html">Day Four</a></li>
+              <li role="presentation"><a href="five.html">Day Five</a></li>
+              <li role="presentation"><a href="six.html">Day Six</a></li>
+              <li role="presentation"><a href="seven.html">Day Seven</a></li>
+              <li role="presentation"><a href="eight.html">Day Eight</a></li>
+              <li role="presentation"><a href="nine.html">Day Nine</a></li>
+              <li role="presentation"><a href="ten.html">Day Ten</a></li>
+              <li role="presentation"><a href="eleven.html">Day Eleven</a></li>
+              <li role="separator" class="divider"></li>
+              <li role="presentation"><a href="final.html">Final Project</a></li>
             </ul>
-          </main>
-        </div><!-- end Concepts -->
-
-        <!-- <div class="row section"> --><!-- Course Item -->
-          <!-- <aside class="col-sm-3">
-            <h2>Course Item</h2>
-          </aside>
-          <main class="col-sm-9">
-            <ul class="points">
-              <li></li>
-            </ul>
-          </main>
-        </div> --><!-- end Course Item -->
-
-        <!-- <div class="row section take-home"> --><!-- Take Home -->
-          <!-- <aside class="col-sm-3">
-            <h2>Take Home</h2>
-          </aside>
-          <main class="col-sm-9">
-            <ol class="points">
-
-            </ol>
-          </main>
-        </div> --><!-- end Take Home -->
-
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h1>Day 6</h1>
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+
+    <div class="row section">
+      <!-- Concepts -->
+      <aside class="col-sm-3">
+        <h2>Concepts</h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>Structural Directives</li>
+          <li>Forms</li>
+          <li>Form Validation (with and without Material)</li>
+        </ul>
+      </main>
+    </div><!-- end Concepts -->
+
+    <div class="row section">
+      <!-- Structural Directives -->
+      <aside class="col-sm-3">
+        <h2><a href="https://angular.io/guide/structural-directives">Structural Directives</a></h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <pre><code>
+                < div *ngIf="hero" class="name">{{user.name}}< /div>
+                </code></pre>
+          <li>What's this * thingy?</li>
+          <li><b>"The asterisk is "syntactic sugar" for something a bit more complicated. Internally, Angular translates
+              the *ngIf attribute into a <ng-template> element, wrapped around the host element..."</b> <br/> -Angular Docs
+          </li>
+        </ul>
+      </main>
+    </div><!-- end Structural Directives -->
+
+    <div class="row section">
+      <!-- NgIf -->
+      <aside class="col-sm-3">
+        <h2>*ngIf</h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>Let's say we wanted to <em>completely</em> remove an element from the DOM. You may want to hide certain information
+            from certain types of users (admin vs. user). Or maybe if the user hasn't paid their subscription you want to
+            make sure they can't see certain values.</li>
+          <li>In order to do this, you need two things:
+            <ul>
+              <li>A value to control the *ngIf</li>
+              <li>An *ngIf statement</li>
+            </ul>
+          </li>
+          <li>Let's take a look at our <b>nav.component.html</b> file.
+            <img src="img/ngIf-example.png" alt="ngIf" class="img-responsive">
+          </li>
+          <li>Those *ngIf statements are controlling whether the anchor tags get rendered into the DOM or not.</li>
+          <li>What is the control value?</li>
+          <li>What if we want to run a function to determine our ngIf statement? We can but...</li>
+          <ol>
+            <li>The function <em>must</em> return a boolean</li>
+            <li>The function will only run when Angular runs the lifecycle hooks</li>
+            <li>This isn't the optimal way to use ngIf because of the lifecycle limitations</li>
+          </ol>
+          <li>What if we want an "else" after that "if"?</li>
+          <pre><code>
+                  < div *ngIf="user.lastName; else <b class="text-danger">noLastName</b>">
+                    You're in the last name club Mr./Mrs.{{ user.lastName }}!
+                  < / div>
+                  < ng-template <b class="text-danger">#noLastName</b>>
+                    Sorry, you don't have a name...
+                  < / ng-template>
+                 </code></pre>
+        </ul>
+      </main>
+    </div><!-- end NgIf -->
+
+    <div class="row section">
+      <!-- ngSwitch -->
+      <aside class="col-sm-3">
+        <h2>*ngSwitch</h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>"BUT TEACH!" you say, "What if there are more than two options?!"</li>
+          <li>Enter [ngSwitch]</li>
+          <li>As with a vanilla JS switch statement, you need:</li>
+          <ol>
+            <li>A condition to evaluate</li>
+            <li>Cases to check for</li>
+            <li>A default case</li>
+            <pre><code>
+                    < div <span class="text-success">[ngSwitch]="product.price"</span> >
+                      < p <span class="text-success">*ngSwitchCase</span>="12.99">Expensive!!< /p>
+                      < p <span class="text-success">*ngSwitchCase</span>="9.99">Pricey.< /p>
+                      < p <span class="text-success">*ngSwitchCase</span>="2.99">Darn Cheap!< /p>
+                    < /div>
+                  </code></pre>
+          </ol>
+        </ul>
+      </main>
+    </div><!-- end ngSwitch -->
+
+    <div class="row section">
+      <!-- NgClass -->
+      <aside class="col-sm-3">
+        <h2><a href="https://angular.io/api/common/NgClass#usage-notes">*ngClass</a></h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>How can we include conditional classes and styles?</li>
+          <li>[ngClass], of course!</li>
+          <li>Can we use a TERNARY???</li>
+          <li>Yep....</li>
+          <pre><code>
+                   < p [ngClass]="user.lastName ? 'blue-text' : 'red-text'">{{user.firstName}}< /p>
+                 </code></pre>
+          <li>Just like with vanilla JS, you have to have these two classes defined in your CSS for it to work.</li>
+        </ul>
+      </main>
+    </div><!-- end NgClass -->
+
+    <div class="row section">
+      <!-- NgFor -->
+      <aside class="col-sm-3">
+        <h2>*ngFor</h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>If we look at our users.component.html, we see that we are displaying a list of users. But how are we referring
+            to that list? How is each member being pulled out of the array of users?</li>
+          <li>Angular Material is masking a very basic directive: *ngFor
+            <pre><code>
+                      [dataSource]="users"
+                    </code></pre>
+          </li>
+          <li>This is Material's way of using *ngFor. In "plain" Angular, it would look like this:
+            <pre><code>
+                     < li *ngFor="let user of users">{{user.firstName}}< /li>
+                   </code></pre>
+            <li>Using the same logic as a for loop, for as many users as you have, you create a single li that has the user's
+              first name (in this case.)</li>
+            <li>This is GREAT for iterating over arrays of data.</li>
+          </li>
+        </ul>
+        <p>Try it out!</p>
+        <ol>
+          <li>Create a new component named <b>Products</b> using the Angular CLI.</li>
+          <li>Add a Products service and create a GET route for /products <small>Hint: follow the pattern in your users.component.ts
+              for accessing those products</small></li>
+          <li>After you are sure you have the data (check in your console) use *ngFor to repeat over the data in your products.component.html</li>
+          <li>Display the products' names, descriptions, and prices.</li>
+        </ol>
+      </main>
+    </div><!-- end NgFor -->
+
+    <div class="row section">
+      <!-- Forms and Validation -->
+      <aside class="col-sm-3">
+        <h2>Forms and Validation</h2>
+      </aside>
+      <main class="col-sm-9">
+        <ul class="points">
+          <li>Two ways to do Forms in Angular:
+            <ol>
+              <li><a href="https://angular.io/guide/forms#template-driven-forms">Template Driven</a>
+                <ol>
+                  <li>Import the FormsModule into app.module.ts and add it to your imports to use Angular Template Driven
+                    Forms
+                    <pre><code>
+                        //In app.module.ts 
+
+                        <span class="text-success">import { FormsModule }   from '@angular/forms';</span>
+                        //...
+                        @NgModule({
+                          imports: [
+                            BrowserModule,
+                            <span class="text-success">FormsModule</span>
+                          ],
+                          /...
+                      </code></pre>
+                  </li>
+                  <li>Add a form to your html file, and include an <em>ngForm</em> directive (automatically imported by Angular)
+                    <pre><code>
+                        < form <span class="text-success">#loginForm</span>="ngForm">
+                        //...
+                        < /form>
+                    </code></pre>
+                  </li>
+                  <li>Add [(ngModel)] directive and a Template reference variable to your inputs inside your form
+                    <pre><code>
+            ...
+            < input type="email" name="email" <span class="text-success">[(ngModel)]</span>="user.email" <span class="text-success">#email</span>="ngModel"/>
+                      </code></pre>
+                    <small>Name attribute is required for Angular Template driven forms to work.</small>
+                  </li>
+                  <li>
+                    <h4>Angular adds special validation classes</h4>
+                    <img src="img/template-forms-chart.png" alt="template Forms Chart" class="img-responsive">
+                    <p>You can use these classes to change styles based on the validity of your forms</p>
+                    <ul>
+                      <li>The reason you use that Template reference variable (above) is because you can use it to control
+                        error messages for your user
+                        <pre><code>
+                        // your email input here...
+                        < div <span class="text-success">[hidden]="email.valid || email.pristine"</span>
+                              class="alert alert-danger">
+                          Email is required
+                        < /div>
+                        </code></pre>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Resetting your form: on your submit button and cancel buttons...
+                    <pre><code>
+                          (click)="submitLogin(); <span class="text-success">loginForm.reset()</span>"
+                      </code></pre>
+                  </li>
+                </ol>
+              </li>
+              <li><a href="https://angular.io/guide/reactive-forms">Reactive Forms</a>
+                <ol>
+                  <li>Reactive forms are newer and are based on Observable Streams. They are amazing.</li>
+                  <li>Import and include ReactiveFormsModule in your app.module.ts file
+                    <pre><code>
+                      <span class="text-success">import { ReactiveFormsModule } from '@angular/forms';</span>
+
+                      @NgModule({
+                        imports: [
+                          // other imports ...
+                          <span class="text-success">ReactiveFormsModule</span>
+                    </code></pre>
+                  </li>
+                  <li>Import and inject the FormBuilder class in your login.component.ts 
+                    <pre><code>
+                      //login.component.ts
+
+                      <span class="text-success">import { FormBuilder } from '@angular/forms';</span>
+                      ...
+                      export class LoginComponent {
+                        <span class="text-success">loginForm = this.fb.group({ </span>
+                          email: [],
+                          password: []
+                        });
+
+                        <span class="text-success">constructor(private fb: FormBuilder) { }</span>
+                      }
+                    </code></pre>
+                  </li>
+                  <li>Import and use Validators class
+                    <pre><code>
+                      //login.component.ts
+                      <span class="text-success">import { Validators } from '@angular/forms';</span>
+                      //...
+                      <span class="text-success">email: ['', Validators.required],
+                      password: ['', Validators.required]</span> 
+                    });
+                    </code></pre>
+                  </li>
+                  <li>In your html file, add a formControlName property <em>and HTML5 required attribute</em> to your inputs that matches your FormBuilder members
+                    <pre><code>
+                        //login.component.html
+
+                        < input name="email" <span class="text-success">formControlName="email" required</span> />
+                    </code></pre>
+                    <small>For testing: let's add the form's status property to our view:
+                      <pre><code>
+                        //login.component.html
+
+                        {{loginForm.status}}
+                      </code></pre>
+                    </small>
+                  </li>
+                  <li>A list of complete Validators can be <a href="https://angular.io/api/forms/Validators">found here</a></li>
+                </ol>
+              </li>
+        </ul>
+        </li>
+        </ol>
+      </main>
+    </div><!-- end Forms and Validation -->
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
