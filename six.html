@@ -81,7 +81,7 @@
       <main class="col-sm-9">
         <ul class="points">
           <pre><code>
-                < div *ngIf="hero" class="name">{{user.name}}< /div>
+                < div <span class="text-success">*ngIf="hero"</span> class="name">{{user.name}}< /div>
                 </code></pre>
           <li>What's this * thingy?</li>
           <li><b>"The asterisk is "syntactic sugar" for something a bit more complicated. Internally, Angular translates
@@ -150,6 +150,7 @@
                       < p <span class="text-success">*ngSwitchCase</span>="12.99">Expensive!!< /p>
                       < p <span class="text-success">*ngSwitchCase</span>="9.99">Pricey.< /p>
                       < p <span class="text-success">*ngSwitchCase</span>="2.99">Darn Cheap!< /p>
+                      < p <span class="text-success">*ngSwitchDefault</span>>Either really expensive or TOO CHEAP!< /p>
                     < /div>
                   </code></pre>
           </ol>
@@ -169,7 +170,7 @@
           <li>Can we use a TERNARY???</li>
           <li>Yep....</li>
           <pre><code>
-                   < p [ngClass]="user.lastName ? 'blue-text' : 'red-text'">{{user.firstName}}< /p>
+                   < p <span class="text-success">[ngClass]="user.lastName ? 'blue-text' : 'red-text' </span>">{{user.firstName}}< /p>
                  </code></pre>
           <li>Just like with vanilla JS, you have to have these two classes defined in your CSS for it to work.</li>
         </ul>
@@ -192,7 +193,7 @@
           </li>
           <li>This is Material's way of using *ngFor. In "plain" Angular, it would look like this:
             <pre><code>
-                     < li *ngFor="let user of users">{{user.firstName}}< /li>
+                     < li <span class="text-success">*ngFor</span>="let user of users">{{user.firstName}}< /li>
                    </code></pre>
             <li>Using the same logic as a for loop, for as many users as you have, you create a single li that has the user's
               first name (in this case.)</li>
